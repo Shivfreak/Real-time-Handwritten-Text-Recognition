@@ -47,8 +47,8 @@ def build_model():
         Conv2D(128, (3, 3), activation='relu'),
         Flatten(),
         Reshape((-1, 128)),  # Reshape for LSTM input
-        LSTM(64, return_sequences=True),
-        LSTM(32),
+       // LSTM(64, return_sequences=True),
+        //LSTM(32),
         Dense(128, activation='relu'),
         Dropout(0.5),
         Dense(num_classes, activation='softmax')
@@ -78,4 +78,5 @@ def train_model():
 
 if __name__ == "__main__":
     train_model()
+
 
